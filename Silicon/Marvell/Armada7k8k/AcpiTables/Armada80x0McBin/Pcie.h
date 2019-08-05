@@ -16,5 +16,5 @@
 #define PCI_IO_BASE        0x0
 #define PCI_IO_SIZE        0x10000
 #define PCI_IO_TRANSLATION 0xEFF00000
-#define PCI_ECAM_BASE      0xE0008000
+#define PCI_ECAM_BASE      0xE0000000
 #define PCI_ECAM_SIZE      0x10000000
