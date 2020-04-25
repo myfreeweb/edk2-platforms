@@ -39,6 +39,7 @@ STATIC MV_GPIO_DEVICE_PATH mDevicePathTemplate = {
   }
 };
 
+#if !defined(MDEPKG_NDEBUG)
 STATIC PCA95XX_PIN_COUNT mPca95xxPinCount[PCA95XX_MAX_ID] = {
   PCA9505_PIN_COUNT,
   PCA9534_PIN_COUNT,
@@ -53,7 +54,6 @@ STATIC PCA95XX_PIN_COUNT mPca95xxPinCount[PCA95XX_MAX_ID] = {
   PCA9557_PIN_COUNT,
 };
 
-#if !defined(MDEPKG_NDEBUG)
 /**
 
 Routine Description:

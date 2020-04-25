@@ -604,7 +604,9 @@ Pp2SnpStop (
 {
   EFI_TPL SavedTpl;
   SavedTpl = gBS->RaiseTPL (TPL_CALLBACK);
+#if !defined(MDEPKG_NDEBUG)
   PP2DXE_CONTEXT *Pp2Context = INSTANCE_FROM_SNP(This);
+#endif
   UINT32 State = This->Mode->State;
 
   if (State != EfiSimpleNetworkStarted && State != EfiSimpleNetworkInitialized) {
@@ -668,7 +670,9 @@ Pp2SnpShutdown (
 {
   EFI_TPL SavedTpl;
   SavedTpl = gBS->RaiseTPL (TPL_CALLBACK);
+#if !defined(MDEPKG_NDEBUG)
   PP2DXE_CONTEXT *Pp2Context = INSTANCE_FROM_SNP(This);
+#endif
   UINT32 State = This->Mode->State;
 
   if (State != EfiSimpleNetworkInitialized) {

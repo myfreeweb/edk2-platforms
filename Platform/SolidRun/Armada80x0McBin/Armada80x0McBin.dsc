@@ -40,6 +40,16 @@
   ArmadaBoardDescLib|Platform/SolidRun/Armada80x0McBin/Armada80x0McBinBoardDescLib/Armada80x0McBinBoardDescLib.inf
   NonDiscoverableInitLib|Platform/SolidRun/Armada80x0McBin/NonDiscoverableInitLib/NonDiscoverableInitLib.inf
 
+###################################################################################################
+# BuildOptions Section - Define the module specific tool chain flags that should be used as
+#                        the default flags for a module. These flags are appended to any
+#                        standard flags that are defined by the build process.
+###################################################################################################
+
+[BuildOptions]
+  GCC:RELEASE_*_*_CC_FLAGS    = -DMDEPKG_NDEBUG -DNDEBUG
+  CLANG:RELEASE_*_*_CC_FLAGS    = -DMDEPKG_NDEBUG -DNDEBUG
+
 ################################################################################
 #
 # Pcd Section - list of all EDK II PCD Entries defined by this Platform
